@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(".hideme").hide();
+            });
+            $(".show").click(function(){
+                $(".showme").show()
+            });
+            $(".toggle").click(function(){
+                $(".toggleme").toggle();
+            });
+            $(".slidedown").click(function(){
+                $(".slidedownme").slideDown();
+            });
+            $(".slideup").click(function(){
+                $(".slideupme").slideUp();
+            });
+            $(".slidetoggle").click(function(){
+                $(".slidetoggleme").slideToggle();
+            });
+            $(".fadein").click(function(){
+                $(".fadeinme").fadeIn();
+            });
+            $(".fadeout").click(function(){
+                $(".fadeoutme").fadeOut();
+            });
+            $(".addclassb").click(function(){
+                $(".addclasstome").addClass("me");
+            });
+            $(".before").click(function(){
+                $(".beforeme").before();
+            });
+            $(".beforeb").click(function(){
+                $(".beforeme").before("<h5>TEST</h5>");
+            });
+            $(".afterb").click(function(){
+                $(".afterme").after("<h5>TEST</h5>");
+            });
+            $(".appendb").click(function(){
+                $(".appendme").append("This maybe?");
+            });
+            $(".htmlb").click(function(){
+                var htmlString = $(".blockhtml").html();
+                $(".htmlme").text(htmlString);
+                // $(".htmlme").html();
+            });
+            $(".attrb").click(function(){
+                var classname = $(".attrme").attr("class");
+                $(".attrme").text(classname);
+            });
+            $(".valb").click(function(){
+                var bval = $(this).text();
+                $("#nothing").val(bval);
+            });
+            // $(".").click(function(){
+            //     $("").();
+            // });
+
+        });
+    </script>
+    
+    <title>Click Doc</title>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        
+        <div class="block">
+            <h1>
+                .hide()
+            </h1>
+            
+            <button class="hide">
+                Hide
+            </button>
+
+            <p class="hideme showme">
+                    Hide the matched elements. 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .show()
+            </h1>
+            
+            <button class="show">
+                Show
+            </button>
+
+            <p class="showme hideme">
+                Display the matched elements.
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .toggle()
+            </h1>
+            
+            <button class="toggle">
+                Toggle
+            </button>
+
+            <p class="toggleme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .slideDown()
+            </h1>
+            
+            <button class="slidedown">
+                slideDown
+            </button>
+
+            <p class="slidedownme slideupme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .slideUp()
+            </h1>
+            
+            <button class="slideup">
+                slideUp
+            </button>
+
+            <p class="slideupme slidedownme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .slideToggle()
+            </h1>
+            
+            <button class="slidetoggle">
+                slideToggle
+            </button>
+
+            <p class="slidetoggleme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .fadeIn()
+            </h1>
+            
+            <button class="fadein">
+                fadeIn
+            </button>
+
+            <p class="fadeinme fadeoutme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .fadeOut()
+            </h1>
+            
+            <button class="fadeout">
+                fadeOut
+            </button>
+
+            <p class="fadeinme fadeoutme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .addClass()
+            </h1>
+            
+            <button class="addclassb">
+                addClass
+            </button>
+
+            <p class="addclasstome">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .before()
+            </h1>
+            
+            <button class="beforeb">
+                before
+            </button>
+
+            <p class="beforeme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .after()
+            </h1>
+            
+            <button class="afterb">
+                after
+            </button>
+
+            <p class="afterme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .append()
+            </h1>
+            
+            <button class="appendb">
+                append
+            </button>
+
+            <p class="appendme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block blockhtml">
+            <h1>
+                .html()
+            </h1>
+            
+            <button class="htmlb">
+                html
+            </button>
+
+            <p class="htmlme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .attr()
+            </h1>
+            
+            <button class="attrb">
+                attr
+            </button>
+
+            <p class="attrme">
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test 
+                test test test test test test test test
+            </p>
+
+        </div>
+
+        <div class="block">
+            <h1>
+                .val()
+            </h1>
+            
+            <button class="valb">
+                val
+            </button>
+
+            <p class="valme">
+                Get the current value of the first element 
+                in the set of matched elements or set the 
+                value of every matched element. 
+            </p>
+           
+            <form action="#">
+                <label for="nothing"></label>
+                <input type="text" id="nothing" 
+                name="nothing" value="hello">
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
